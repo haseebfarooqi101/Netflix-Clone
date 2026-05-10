@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --netflix-red: #e50914;
+  --netflix-black: #141414;
+  --netflix-dark: #181818;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--netflix-black);
+  color: white;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* Hide scrollbar for row sliders */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Netflix row hover effect */
+.movie-card-wrapper:hover .movie-card {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+/* Smooth transitions */
+.transition-netflix {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hero gradient overlays */
+.hero-vignette {
+  background:
+    linear-gradient(
+      to right,
+      rgba(20, 20, 20, 0.9) 0%,
+      rgba(20, 20, 20, 0.6) 40%,
+      rgba(20, 20, 20, 0) 70%
+    ),
+    linear-gradient(
+      to top,
+      rgba(20, 20, 20, 1) 0%,
+      rgba(20, 20, 20, 0.4) 20%,
+      rgba(20, 20, 20, 0) 50%
+    );
+}
+
+/* Row gradient fade edges */
+.row-fade-right::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  background: linear-gradient(to right, transparent, #141414);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Video player controls */
+.player-controls {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+}
+
+/* Profile avatar ring */
+.profile-active {
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+
+/* Maturity rating badge */
+.maturity-badge {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 1px 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Netflix button styles */
+.btn-netflix-primary {
+  @apply bg-white text-black font-semibold px-6 py-2 rounded flex items-center gap-2 hover:bg-opacity-80 transition-all;
+}
+
+.btn-netflix-secondary {
+  @apply bg-gray-500 bg-opacity-70 text-white font-semibold px-6 py-2 rounded flex items-center gap-2 hover:bg-opacity-50 transition-all;
+}
+
+/* Hover card popup */
+.hover-card {
+  transform-origin: center bottom;
+  animation: hoverCardIn 0.2s ease-out forwards;
+}
+
+@keyframes hoverCardIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* For centered popup */
+.hover-card[style*='translateX(-50%)'] {
+  animation: hoverCardInCenter 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes hoverCardInCenter {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.95) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1) translateY(0);
+  }
+}
+
+/* Tudum splash */
+.tudum-overlay {
+  animation: tudumFade 3.5s ease-in-out forwards;
+}
+
+@keyframes tudumFade {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* Input focus netflix style */
+.netflix-input {
+  @apply w-full bg-zinc-700 bg-opacity-80 text-white rounded px-4 py-4 text-base outline-none border border-transparent focus:border-gray-400 transition-all;
+}
+
+.netflix-input::placeholder {
+  color: #8c8c8c;
+}
+
+/* Loading shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Modal responsive grid */
+.modal-grid {
+  grid-template-columns: 2fr 1fr;
+}
+@media (max-width: 600px) {
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
