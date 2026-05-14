@@ -11,7 +11,7 @@ const metadataRouter = require('./routes/metadata')
 const app = express()
 const PORT = process.env.SERVER_PORT || 3001
 
-app.use(cors({ origin: process.env.VERCEL_FRONTEND_URL || 'http://localhost:3000' }));
+app.use(cors({ origin: [process.env.VERCEL_FRONTEND_URL, 'http://localhost:3000'] }));
 app.use(express.json())
 
 app.use('/api/movies', moviesRouter)
