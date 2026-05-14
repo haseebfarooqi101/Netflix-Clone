@@ -1,24 +1,38 @@
-import { useEffect } from 'react';
+'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useStore, Profile } from '@/lib/store'
+import { getAuthCookie } from '@/lib/auth'
 import { PencilIcon } from 'lucide-react'
 import ProfileAvatar from '@/components/ProfileAvatar'
 
 export default function ProfilesPage() {
-  const router = useRouter();
-  const { profiles, setActiveProfile, isLoggedIn } = useStore();
-  const [isManaging, setIsManaging] = useState(false);
+  const router = useRouter()
+  const { profiles, setActiveProfile, isLoggedIn, setLoggedIn } = useStore()
+  const [isManaging, setIsManaging] = useState(false)
+  const [isChecking, setIsChecking] = useState(true)
 
   useEffect(() => {
-    if (!isLoggedIn) {
-      router.replace('/login');
+    const hasCookie = getAuthCookie()
+    
+    if (hasCookie && !isLoggedIn) {
+      setLoggedIn(true)
     }
-  }, [isLoggedIn, router]);
 
-  if (!isLoggedIn) {
-    return null;
+    if (!hasCookie && !isLoggedIn) {
+      router.replace('/login')
+    } else {
+      setIsChecking(false)
+    }
+  }, [isLoggedIn, router, setLoggedIn])
+
+  if (isChecking) {
+    return (
+      <div className="min-h-screen bg-netflix-black flex items-center justify-center">
+        <div className="w-12 h-12 border-4 border-netflix-red border-t-transparent rounded-full animate-spin" />
+      </div>
+    )
   }
 
   const handleSelectProfile = (profile: Profile) => {
