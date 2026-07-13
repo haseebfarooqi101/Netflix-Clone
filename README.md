@@ -14,7 +14,7 @@ A full-stack streaming platform inspired by Netflix, built with **Next.js**, **E
 
 <img src="https://img.shields.io/badge/TMDB-01D277?style=for-the-badge"/>
 
-<img src="https://img.shields.io/badge/Zustand-181717?style=for-the-badge"/>
+
 
 <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge"/>
 
