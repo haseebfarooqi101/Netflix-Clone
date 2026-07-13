@@ -1,82 +1,76 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Netflix-Clone
 =======
 # Netflix Clone
+=======
+<div align="center">
+>>>>>>> 625b2e28bd0454b729d14f1d1cba2b5310307887
 
-A pixel-perfect Netflix clone that streams your local MKV movie library with metadata pulled from TMDB.
+# 🎬 Netflix Clone
 
-## Setup
+### Personal Media Streaming Platform inspired by Netflix
 
-### 1. Install dependencies
+A full-stack streaming platform inspired by Netflix, built with **Next.js**, **Express.js**, and the **TMDB API**. The application automatically organizes a local movie library, fetches rich metadata, streams media through a custom player, and delivers a modern Netflix-like user experience.
 
-```bash
-npm install
-```
+<p>
 
-### 2. Add the tudum sound
+<img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=nextdotjs"/>
 
-Download a tudum-style sound effect and place it at:
+<img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express"/>
 
-```
-public/sounds/tudum.mp3
-```
+<img src="https://img.shields.io/badge/TMDB-01D277?style=for-the-badge"/>
 
-### 3. Run the app
 
-**Both servers at once (recommended):**
 
-```bash
-npm run dev
-```
+<img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge"/>
 
-This starts:
+<img src="https://img.shields.io/badge/React_Player-61DAFB?style=for-the-badge"/>
 
-- Next.js frontend → http://localhost:3000
-- Express backend → http://localhost:3001
+</p>
 
-**Or run separately:**
+</div>
 
-```bash
-npm run dev:next    # frontend
-npm run dev:server  # backend
-```
+---
 
-## Usage
+## 🎥 Project Walkthrough
 
-1. Open http://localhost:3000
-2. Sign in (any email + password with 4+ chars)
-3. Select or create a profile
-4. Browse your movies — metadata, posters, and trailers load automatically from TMDB
+> **This project cannot be deployed as a traditional live demo.**
 
-## Movie folder structure
+The application streams movies from a **locally stored media library** through an Express server. Since the media files are several hundred gigabytes in size, hosting them online isn't practical.
 
-Your movies should be in `D:/movies` in folders like:
+Instead, a complete walkthrough of the application running locally is provided below.
+
+🎥 **Project Walkthrough**
 
 ```
-D:/movies/
-  Interstellar (2014) [2160p] [4K] [BluRay]/
-    Interstellar.2014.2160p.mkv
-  Dune (2021) [2160p] [4K]/
-    Dune.2021.mkv
+Replace this with your YouTube or Loom video link
 ```
 
-The server parses folder names to extract title + year, then fetches metadata from TMDB.
+---
 
-## Features
+# 📖 Overview
 
-- Netflix-identical login page
-- Profile selector + management (up to 5 profiles)
-- Hero banner with auto-playing YouTube trailers
-- Hover cards with trailer previews
-- Full video player with keyboard shortcuts:
-  - `Space` / `K` — play/pause
-  - `←` / `J` — rewind 10s
-  - `→` / `L` — skip 10s
-  - `M` — mute
-  - `F` — fullscreen
-  - `↑` / `↓` — volume
+Netflix Clone is a full-stack personal streaming platform that recreates the modern Netflix experience while allowing users to stream movies from their own local collection.
+
+Instead of relying on a commercial streaming backend, the application scans locally stored media, extracts movie information, retrieves metadata from **The Movie Database (TMDB)**, and automatically generates a rich browsing experience complete with posters, trailers, ratings, genres, and detailed movie information.
+
+The project focuses on building production-style frontend architecture, reusable components, responsive layouts, backend integration, API consumption, and custom media playback.
+
+---
+
+# ✨ Features
+
+## 🎬 Movie Library
+
+- Automatic Local Movie Discovery
+- TMDB Metadata Integration
+- Automatic Posters & Backdrops
+- Trending & Popular Categories
+- Continue Watching
 - My List
+<<<<<<< HEAD
 - Search
 - Account & profile settings
 - Tudum splash on first load
@@ -84,3 +78,67 @@ The server parses folder names to extract title + year, then fetches metadata fr
 =======
 # Netflix-Clone
 >>>>>>> 4a411898946180942fbed4bb3a5a5288252dec97
+=======
+- New Releases
+- Genre Organization
+
+---
+
+## 🔍 Search
+
+- Instant Search
+- Movie Suggestions
+- TMDB Metadata Search
+- Fast Filtering
+
+---
+
+## 👤 Profiles
+
+- Multiple User Profiles
+- Profile Selection
+- Add New Profiles
+- Manage Profiles
+- Personalized Experience
+
+---
+
+## 🎥 Media Playback
+
+- Custom Video Player
+- Fullscreen Support
+- Playback Controls
+- Playback Speed Controls
+- Keyboard Shortcuts
+- Resume Playback
+- Volume Controls
+- Progress Tracking
+
+> **Note**
+>
+> Video Quality Selection is currently **Work in Progress** and will be completed in a future update.
+
+---
+
+## 🎞 Movie Information
+
+- Movie Overview
+- Cast Information
+- Genres
+- Runtime
+- Ratings
+- Release Year
+- Trailer Integration
+- Related Movies
+
+---
+
+## ⚙ User Experience
+
+- Responsive Design
+- Netflix-inspired UI
+- Smooth Animations
+- Framer Motion Transitions
+- Fast Navigation
+- Modern Component Architecture
+>>>>>>> 625b2e28bd0454b729d14f1d1cba2b5310307887
