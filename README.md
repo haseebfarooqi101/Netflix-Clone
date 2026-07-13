@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Netflix-Clone
 =======
 # Netflix Clone
@@ -80,3 +81,6 @@ The server parses folder names to extract title + year, then fetches metadata fr
 - Account & profile settings
 - Tudum splash on first load
 >>>>>>> 6643834 (1)
+=======
+# Netflix-Clone
+>>>>>>> 4a411898946180942fbed4bb3a5a5288252dec97

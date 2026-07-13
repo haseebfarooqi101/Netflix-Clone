@@ -10,6 +10,7 @@ const cache = new NodeCache({ stdTTL: 3600 })
 
 const MOVIES_DIR = process.env.MOVIES_DIR || 'D:/movies'
 
+
 // GET /api/movies - list all movies with metadata
 router.get('/', async (req, res) => {
   try {
