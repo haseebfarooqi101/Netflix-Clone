@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Netflix-Clone
-=======
-# Netflix Clone
-=======
 <div align="center">
->>>>>>> 625b2e28bd0454b729d14f1d1cba2b5310307887
 
 # 🎬 Netflix Clone
 
@@ -70,15 +62,6 @@ The project focuses on building production-style frontend architecture, reusable
 - Trending & Popular Categories
 - Continue Watching
 - My List
-<<<<<<< HEAD
-- Search
-- Account & profile settings
-- Tudum splash on first load
->>>>>>> 6643834 (1)
-=======
-# Netflix-Clone
->>>>>>> 4a411898946180942fbed4bb3a5a5288252dec97
-=======
 - New Releases
 - Genre Organization
 
@@ -140,5 +123,93 @@ The project focuses on building production-style frontend architecture, reusable
 - Smooth Animations
 - Framer Motion Transitions
 - Fast Navigation
-- Modern Component Architecture
->>>>>>> 625b2e28bd0454b729d14f1d1cba2b5310307887
+- Modern Component Architecture# 📸 Application Showcase
+
+## Authentication
+
+<table>
+<tr>
+<td align="center">
+
+### Sign In
+
+<img src="images/login.png" width="100%"/>
+
+</td>
+
+<td align="center">
+
+### Profile Selection
+
+<img src="images/profile-selection.png" width="100%"/>
+
+</td>
+</tr>
+</table>
+
+---
+
+## Home Experience
+
+<table>
+<tr>
+<td align="center">
+
+### Hero Banner
+
+<img src="images/home-hero.png" width="100%"/>
+
+</td>
+
+<td align="center">
+
+### Movie Categories
+
+<img src="images/home-categories.png" width="100%"/>
+
+</td>
+</tr>
+</table>
+
+---
+
+## Movie Details
+
+<p align="center">
+
+<img src="images/movie-modal.png" width="90%"/>
+
+</p>
+
+Browse detailed movie information including:
+
+- Synopsis
+- Cast
+- Genres
+- Runtime
+- Ratings
+- Add to My List
+- Quick Play
+
+---
+
+## Custom Media Player
+
+<p align="center">
+
+<img src="images/player.png" width="90%"/>
+
+</p>
+
+### Features
+
+- Fullscreen Playback
+- Playback Speed Controls
+- Resume Playback
+- Keyboard Shortcuts
+- Volume Controls
+- Progress Tracking
+
+> **Work in Progress**
+>
+> Video Quality Selection (Auto, 4K, 1080p, 720p, 480p) is currently under development and will be fully functional in a future update.
